@@ -1,0 +1,23 @@
+@import 'variables';
+
+.nav-btn {
+    background-color: #6F6E87;
+    color: #161430;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    height: 100%;
+    transition: all ease-in 0.2s;
+    border-radius: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: $font-color;
+        color: black;
+        transition: all ease-in 0.2s;
+    }
+    &:focus{
+        animation: focus-blink 2s infinite;
+    }
+    outline: none;
+}

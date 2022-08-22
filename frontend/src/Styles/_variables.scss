@@ -1,0 +1,20 @@
+$background-color: #242333;
+$nav-color: #473D53;
+$nav-items: #655973;
+$primary-color: #ffc107;
+$font-color: #f5f5f5;
+
+@keyframes focus-blink{
+    0%{
+        border: 2px solid rgb(255, 255, 255);
+    }
+    25%{
+        border: 2px solid $nav-color;
+    }
+    50%{
+        border: 2px solid $nav-color;
+    }
+    100%{
+        border: 2px solid rgb(255, 255, 255);
+    }
+}

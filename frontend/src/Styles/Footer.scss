@@ -1,0 +1,23 @@
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    hr{
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    .footer-text {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    
+    .footer-link {
+        color: #fff;
+        font-weight: 800;
+        font-style: italic;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

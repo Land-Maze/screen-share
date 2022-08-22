@@ -1,0 +1,12 @@
+{
+    "extends": "tslint:recommended",
+    "defaultSeverity": "error",
+    "rules": {
+        "no-console": {
+            "severity": "warning",
+            "message": "console is not a standard feature",
+            "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+        }
+    },
+    "jsRules": {} 
+}

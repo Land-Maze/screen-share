@@ -1,0 +1,100 @@
+@import 'variables';
+#log-view{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .log-text{
+        width: 100%;
+        background-color: #3d3d3d;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
+        overflow: auto;
+        > .log-item{
+            line-height: 14px;
+            background-color: #303030;
+            padding: 5px 10px;
+            margin: 2px 0;
+            .date-span{
+                color: #44A244;
+                font-size: 12px;
+                font-weight: bold;
+                margin-right: 5px;
+            }
+            .info-level{
+                color: #cab355;
+            }
+            .error-level{
+                color: #c70000;
+            }
+            .warning-level{
+                color: #c74900;
+            }
+            .start-level{
+                color: #1ec700;
+            }
+            .stop-level{
+                color: #656565;
+            }
+            > code{
+                font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+            }
+            &:first-child{
+                border-top-left-radius: 18px;
+            }
+        }
+    }
+    .log-picker{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 100%;
+        background-color: #483e54;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        > .log-item{
+            width: 100%;
+            background-color: #342d3d;
+            text-align: center;
+            padding: 5px;
+            border: $background-color solid 1px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border: #342d3d00 solid 2px;
+            border-bottom: $background-color solid 2px !important;
+            &:hover{
+                filter: invert(100%);
+                cursor: pointer;
+            }
+            &.active{
+                animation: active-blink 2s infinite;
+                @keyframes active-blink{
+                    0%{
+                        border: #342d3d00 solid 2px;
+                        filter: invert(100%);
+                    }
+                    25%{
+                        border: #342d3d00 solid 2px;
+                        filter: invert(0%);
+                    }
+                    50%{
+                        border: #342d3d00 solid 2px;
+                        filter: invert(0%);
+                    }
+                    100%{
+                        border: #342d3d00 solid 2px;
+                        filter: invert(100%);
+                    }
+                }
+            }
+        }
+    }
+    .vl{
+        border-left: 4px solid $primary-color;
+        height: 100%;
+    }
+}
