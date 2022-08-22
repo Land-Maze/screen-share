@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
-import { addLogLine } from '../Utils/logs'
+// import { addLogLine } from '../Utils/logs'
 import socketIOClient from 'socket.io-client'
 import Peer from 'peerjs'
 import { v4 as uuidv4 } from 'uuid'
@@ -74,7 +74,7 @@ const RoomProvider: React.FunctionComponent<RoomContextProps> = ({ children }) =
     useEffect(() => {
         if(!me || !stream) {return}
         ws.on('user-joined', ({peerId}) => {
-            const call = me.call(peerId, stream)
+            me.call(peerId, stream)
         })
 
         me.on('call', (call) => {

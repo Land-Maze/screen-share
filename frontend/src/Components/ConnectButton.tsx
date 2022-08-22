@@ -11,7 +11,7 @@ const ConnectButton = () => {
         let password = connectValueInstance.getValues()[1]
         if(me) {
             ws.emit('join-room', { roomId: id, peerId: me._id ,roomPassword: password });
-            setStream(new MediaStream)
+            setStream(new MediaStream())
         }
     }
     return(
